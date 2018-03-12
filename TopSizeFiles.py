@@ -6,12 +6,17 @@
 import os.path
 import operator
 import argparse
+import platform
 
 ## # MAIN FUNCTIONS # ##
 
 def parse_args():
+    if platform.system() == 'Windows':
+        path = 'C:\\'
+    else:
+        path = '/'
     parser = argparse.ArgumentParser(description="printing the largest files in your system")
-    parser.add_argument('-p', '--path', type=str, default='C:\\', help='provide path to search into', metavar='path')
+    parser.add_argument('-p', '--path', type=str, default=path, help='provide path to search into', metavar='path')
     parser.add_argument('-d', '--delete', type=int, help='index of the file to be deleted', metavar='file index')
     parser.add_argument('-t', '--top', type=int, default=20, help='how many files to display', metavar='number of files')
     parser.add_argument('-f', '--full', action='store_true', default=False, help='to display the full path of the file')
@@ -38,18 +43,18 @@ def longest_string(list, top, full):
                 maxstr = filenamelength
     return maxstr
 
+
 def banner():
-    banner = """
+    b = """
      _____             _____ _ _        ____  _         
     |_   _|__  _ __   |  ___(_) | ___  / ___|(_)_______ 
       | |/ _ \| '_ \  | |_  | | |/ _ \ \___ \| |_  / _ \\
       | | (_) | |_) | |  _| | | |  __/  ___) | |/ /  __/
       |_|\___/| .__/  |_|   |_|_|\___| |____/|_/___\___|
               |_|           
-              
                                              by Yasser                             
     """
-    print(banner)
+    print(b)
 
 
 def main():
@@ -88,5 +93,4 @@ def main():
         else:
             print('You chose no, exiting...')
             exit()
-
 main()
