@@ -10,17 +10,19 @@ import platform
 
 ## # MAIN FUNCTIONS # ##
 
+
 def parse_args():
     if platform.system() == 'Windows':
         path = 'C:\\'
     else:
         path = '/'
-    parser = argparse.ArgumentParser(description="printing the largest files in your system")
+    parser = argparse.ArgumentParser(description="to lockup the largest files in your Drive and delete them upon request")
     parser.add_argument('-p', '--path', type=str, default=path, help='provide path to search into', metavar='path')
     parser.add_argument('-d', '--delete', type=int, help='index of the file to be deleted', metavar='file index')
     parser.add_argument('-t', '--top', type=int, default=20, help='how many files to display', metavar='number of files')
     parser.add_argument('-f', '--full', action='store_true', default=False, help='to display the full path of the file')
     return parser.parse_args()
+
 
 def to_mb(file_size):
     return '{} MB'.format(file_size/1000000)
@@ -92,4 +94,6 @@ def main():
         else:
             print('You chose no, exiting...')
             exit()
+
+
 main()
