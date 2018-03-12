@@ -16,7 +16,7 @@ def parse_args():
         path = 'C:\\'
     else:
         path = '/'
-    parser = argparse.ArgumentParser(description="to lockup the largest files in your Drive and delete them upon request")
+    parser = argparse.ArgumentParser(description="to find the largest files in your drive and delete them upon request")
     parser.add_argument('-p', '--path', type=str, default=path, help='provide path to search into', metavar='path')
     parser.add_argument('-d', '--delete', type=int, help='index of the file to be deleted', metavar='file index')
     parser.add_argument('-t', '--top', type=int, default=20, help='how many files to display', metavar='number of files')
@@ -53,7 +53,7 @@ def banner():
     \___ \| '_ \ / _` |/ __/ _ \ |_) / _ \ |/ _ \/ _` / __|/ _ \ '__|
      ___) | |_) | (_| | (_|  __/  _ <  __/ |  __/ (_| \__ \  __/ |   
     |____/| .__/ \__,_|\___\___|_| \_\___|_|\___|\__,_|___/\___|_|   
-          |_|                                               by Yasser                             
+          |_|                                               by iYassr                             
     """
     print(b)
 
