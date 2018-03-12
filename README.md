@@ -1,11 +1,15 @@
-# Top Size Files
+# SpaceReleaser
+     ____                       ____      _                          
+    / ___| _ __   __ _  ___ ___|  _ \ ___| | ___  __ _ ___  ___ _ __ 
+    \___ \| '_ \ / _` |/ __/ _ \ |_) / _ \ |/ _ \/ _` / __|/ _ \ '__|
+     ___) | |_) | (_| | (_|  __/  _ <  __/ |  __/ (_| \__ \  __/ |   
+    |____/| .__/ \__,_|\___\___|_| \_\___|_|\___|\__,_|___/\___|_|   
+          |_|                                               by iYassr
 
 
 usage: SpaceReleaser.py [-h] [-p path] [-d file index] [-t number of files]
                         [-f]
-
-printing the largest files in your system
-
+                        
 optional arguments:
   -h, --help            show this help message and exit
   -p path, --path path  provide path to search into
