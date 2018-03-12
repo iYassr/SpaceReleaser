@@ -7,9 +7,7 @@
           |_|                                               by iYassr
 
 
-usage: SpaceReleaser.py [-h] [-p path] [-d file index] [-t number of files]<br />
-                        [-f]
-                        
+usage: SpaceReleaser.py [-h] [-p path] [-d file index] [-t number of files] [-f] <br />                        
              
 
 to find the largest files in your drive and delete them upon request<br />
