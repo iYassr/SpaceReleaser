@@ -6,17 +6,48 @@
     |____/| .__/ \__,_|\___\___|_| \_\___|_|\___|\__,_|___/\___|_|   
           |_|                                               by iYassr
 
+# SpaceReleaser
+to find the largest files in your drive and delete them upon request <br />
 
+
+## Getting Started
+Please, follow the instructions below for installing and run SpeaceReleaser.
+
+### Pre-requisites
+Make sure you have installed the following tools:
+```
+Python 2.6 or later.
+```
+
+### Installing
+```bash
+$ git clone https://github.com/iYassr/SpaceReleaser.git
+$ cd SpeaceReleaser
+```
+
+### Running
+```bash
+$ python3 SpaceReleaser.py -h
+```
+
+
+## Usage
 usage: SpaceReleaser.py [-h] [-p path] [-d file index] [-t number of files] [-f] <br />                        
-             
 
-to find the largest files in your drive and delete them upon request<br />
-
-optional arguments:<br />
-  -h, --help            show this help message and exit<br />
+```
+ -h, --help            show this help message and exit<br />
   -p path, --path path  provide path to search into<br />
   -d file index, --delete file index<br />
                         index of the file to be deleted<br />
   -t number of files, --top number of files<br />
                         how many files to display<br />
   -f, --full            to display the full path of the file<br />
+```
+
+### Examples
+```bash
+$ python SpaceReleaser.py c:\users\x\desktop -f -d 11
+
+
+             
+ 
