@@ -1,9 +1,13 @@
 #! python3
 # TopSizeFiles.py - returns the largest file in a directory
 
+
+## # LIBRARIES # ##
 import os.path
 import operator
 import argparse
+
+## # MAIN FUNCTIONS # ##
 
 def parse_args():
     parser = argparse.ArgumentParser(description="printing the largest files in your system")
@@ -14,7 +18,7 @@ def parse_args():
     return parser.parse_args()
 
 def to_mb(file_size):
-    return '%d MB' % (file_size/100)
+    return '{} MB'.format(file_size/1000000)
 
 
 def delete_file(file_path):
@@ -34,8 +38,22 @@ def longest_string(list, top, full):
                 maxstr = filenamelength
     return maxstr
 
+def banner():
+    banner = """
+     _____             _____ _ _        ____  _         
+    |_   _|__  _ __   |  ___(_) | ___  / ___|(_)_______ 
+      | |/ _ \| '_ \  | |_  | | |/ _ \ \___ \| |_  / _ \\
+      | | (_) | |_) | |  _| | | |  __/  ___) | |/ /  __/
+      |_|\___/| .__/  |_|   |_|_|\___| |____/|_/___\___|
+              |_|           
+              
+                                             by Yasser                             
+    """
+    print(banner)
+
 
 def main():
+    banner()
     args = parse_args()
 
     fileSizes = {}
